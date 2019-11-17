@@ -1,0 +1,16 @@
+<suite name="Newstours" parallel="tests"> 
+
+<test name="NewUserRegistration">
+<classes>
+<class name="com.DataDriven.NewTours_NewUserRegistration"/>
+</classes>
+</test>
+
+
+<test name="NewTours_Login">
+<classes>
+<class name="com.DataDriven.NewTours_Login"/>
+</classes>
+</test>
+
+</suite>

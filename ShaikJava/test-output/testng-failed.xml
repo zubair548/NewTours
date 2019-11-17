@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Newstours]" parallel="tests">
+  <test name="NewUserRegistration">
+    <classes>
+      <class name="com.DataDriven.NewTours_NewUserRegistration"/>
+    </classes>
+  </test> <!-- NewUserRegistration -->
+  <test name="NewTours_Login">
+    <classes>
+      <class name="com.DataDriven.NewTours_Login"/>
+    </classes>
+  </test> <!-- NewTours_Login -->
+  <test name="NewUserRegistration(failed)" parallel="tests">
+    <classes>
+      <class name="com.DataDriven.NewTours_NewUserRegistration">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="newUserRegistration"/>
+          <include name="register"/>
+        </methods>
+      </class> <!-- com.DataDriven.NewTours_NewUserRegistration -->
+      <class name="com.DataDriven.NewTours_Login">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.DataDriven.NewTours_Login -->
+    </classes>
+  </test> <!-- NewUserRegistration(failed) -->
+  <test name="NewTours_Login(failed)" parallel="tests">
+    <classes>
+      <class name="com.DataDriven.NewTours_NewUserRegistration">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.DataDriven.NewTours_NewUserRegistration -->
+      <class name="com.DataDriven.NewTours_Login">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- com.DataDriven.NewTours_Login -->
+    </classes>
+  </test> <!-- NewTours_Login(failed) -->
+</suite> <!-- Failed suite [Newstours] -->

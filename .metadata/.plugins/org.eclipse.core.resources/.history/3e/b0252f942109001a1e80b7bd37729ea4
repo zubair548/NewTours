@@ -1,0 +1,19 @@
+package com.Xpath;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class XPathNewTours {
+
+	public static void main(String[] args) {
+		String url="http://newtours.demoaut.com";
+		System.setProperty("webdriver.chrome.driver","./DriverFiles/chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		driver.get(url);
+		//<a href="mercuryunderconst.php">Vacations</a>
+		 WebElement vacations=driver.findElementByLinkText("mercuryunderconst.php");
+		 vacations.click();
+
+	}
+
+}

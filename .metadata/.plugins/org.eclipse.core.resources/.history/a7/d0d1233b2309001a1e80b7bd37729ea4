@@ -1,0 +1,31 @@
+package com.Xpath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class XPathNewTours {
+
+	public static void main(String[] args) {
+		String url="http://newtours.demoaut.com";
+		System.setProperty("webdriver.chrome.driver","./DriverFiles/chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		driver.get(url);
+		//<a href="mercuryunderconst.php">Vacations</a>
+		 WebElement vacations=driver.findElement(By.linkText("Vacations"));
+		 vacations.click();
+		 
+		 //<img src="/images/forms/home.gif" width="118" height="23" border="0">
+		 
+		 
+		 
+		 
+		 
+		 
+///html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[4]/td/a/img
+		 WebElement BacktoHome=driver.findElement(By.xpath("//img[@src='/images/forms/home.gif']"));
+		 BacktoHome.click();
+		 
+	}
+
+}
